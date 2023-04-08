@@ -1,0 +1,127 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    box-sizing: border-box;
+    padding: 3rem;
+    width: 100%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(images/bach1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rectangle_1 {
+    background: #c1d6f4;
+    border-radius: 1rem;
+    margin: 2rem;
+
+    width: clamp(600px, 50%, 1500px);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Sans-serif
+}
+
+.rectangle_1_top {
+    color: #000000;
+    padding: 0.5rem;
+    background-color: #90bcff;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+.rectangle_1_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 4rem;
+    box-sizing: border-box;
+}
+
+.box {
+    justify-self: center;
+    padding: 12px;
+    width: 100%;
+    margin: 2rem;
+    letter-spacing: 0.1em;
+    float: right;
+    border: 2px solid #2196F3;
+}
+
+.form_class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 18px;
+    background-color: white;
+    color: dodgerblue;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.send-button:hover {
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px dodgerblue;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.chat_text {
+    height: 100%;
+    max-height: 20rem;
+    width: 100%;
+    max-width: 30rem;
+    background-color: #fdfdc5;
+    border: 3px solid #00b4f5;
+    font: 16px/26px Georgia, Garamond, Serif;
+    overflow: scroll;
+    padding: 0.7rem;
+    padding-bottom: 2rem;
+}
+
+.chat_text em {
+    color: #0011ff;
+    font-weight: bold;
+    font-style: normal;
+}

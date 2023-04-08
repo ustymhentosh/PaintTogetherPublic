@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Account info</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+    <div class="content">
+        <div class="rectangle_1">
+            <div class="rectangle_1_top"> Your profile </div>
+            <div class="rectangle_1_content">
+                <div class="rectangle_1_item">
+                    <span class="item-name">username:</span>
+                    <span class="item-content" id="username"></span>
+                    <div class="icons">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="rectangle_1_item">
+                    <span class="item-name">email:</span>
+                    <span class="item-content" id="email"></span>
+                    <div class="icons">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="content_links">
+                    <button onclick="window.location.href='/change_password'" class="reset_password_button"> Reset
+                        password </button>
+                    <button onclick="window.location.href='/';" class="reset_password_button">
+                        Log out </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle_1">
+            <div class="rectangle_1_top"> History </div>
+            <div class="rectangle_1_content">
+                <div class="rectangle_1_item">
+                    <span class="item-name">date:</span>
+                    <span class="item-content">changes...</span>
+                    <div class="icons">
+                        <i class="fa-solid fa-hourglass-start"></i>
+                    </div>
+                </div>
+                <div class="rectangle_1_item">
+                    <span class="item-name">date:</span>
+                    <span class="item-content">changes...</span>
+                    <div class="icons">
+                        <i class="fa-solid fa-hourglass-start"></i>
+                    </div>
+                </div>
+                <div class="rectangle_1_item">
+                    <span class="item-name">date:</span>
+                    <span class="item-content">changes...</span>
+                    <div class="icons">
+                        <i class="fa-solid fa-hourglass-start"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style_chat.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="rectangle_1">
+            <div class="rectangle_1_top"> Chat </div>
+            <div class="rectangle_1_content">
+                <div class='field'>
+                    <span class="chat_text" id="chat">
+                        Loading...
+                    </span>
+                </div>
+                <div class="form_class">
+                    <input type="text" id='message' name="message" class="box" required="required">
+                    <button type='submit' class='send-button' id='send-button'>Send</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="{{url_for('static', filename='script_chat.js' )}}"></script>
+</body>
+
+</html>

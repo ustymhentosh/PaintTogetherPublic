@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pixel Battle</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_login.css') }}">
+    <script src="https://kit.fontawesome.com/d374ec7636.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% if login_error %}
+    <div class="error-message">
+        <span class="fa-stack fa-lg">
+            <i class="fas fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ login_error }}
+    </div>
+    {% endif %}
+    {% if success_message %}
+    <div class="success-message">
+        <span class="fa-stack fa-lg">
+            <i class="fas fa-check fa-stack-1x"></i>
+        </span>
+        {{ success_message }}
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <form action="/login" class="form" method="POST">
+            <h2>Sign in</h2>
+
+            <div class="icons">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <input type="email" name="email" class="box" placeholder="Email" required="required">
+
+            <div class="icons">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <input type="password" name="password" class="box" placeholder="Password" required="required">
+
+            <input type="submit" id="submit" value="Login">
+
+            <p>Not registered yet? <a href="/register" class="reg">Create an acount</a></p>
+            <a href="/reset_password" class="reset_password">Forgot password?</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

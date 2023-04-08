@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pixel Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style_register.css') }}">
+    <script src="https://kit.fontawesome.com/d374ec7636.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% if success_msg %}
+    <div class="success-message">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-check-circle fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ success_msg }}
+        <button onclick="window.location.href='/main_page';">Go to to main page</button>
+      </div>      
+    </div>
+    {% endif %}
+    {% if reg_error %}
+    <div class="error-message">
+        <span class="fa-stack fa-lg">
+            <i class="fas fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ reg_error }}
+        </div>
+    {% endif %}
+    
+    <div class="container">
+        <form action="/register" class="form" method='POST'>
+            <h2>Sign up</h2>
+            <h3>One more step to paint!</h3>
+
+            <div class="icons">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <input type="email" name="email" class="box" placeholder="Email" required="required">
+
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <input type="name" name="name" class="box" placeholder="Nickname" required="required">
+
+            <div class="icons">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <input type="password" name="password" class="box" placeholder="Password" required="required">
+
+            <input type="submit" id="submit">
+
+
+            <p>Already registered? <a href="/login">Sign in</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

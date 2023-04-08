@@ -1,0 +1,721 @@
+@import url("//fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap");
+
+html,
+
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.alert-message {
+  font-family: Sans-serif;
+  font-size: 1.1rem;
+  position: relative;
+  display: flex;
+  margin-bottom: 2rem;
+  /* margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.1rem; */
+  background-color: #97d9ff;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  /* border-radius: 10px; */
+  gap: 3rem;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.alert-message button {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-left: auto;
+  color: dodgerblue;
+  font-weight: bold;
+  outline: none;
+  border-radius: 20px;
+}
+
+.alert-message button:hover {
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px dodgerblue;
+}
+
+figure {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #aeaeae;
+  background-image: url(images/bach1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#canvas {
+  padding: 0;
+  margin: 0;
+  display: block;
+  aspect-ratio: 1/1;
+  image-rendering: pixelated;
+}
+
+#container {
+  width: 100%;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-rows: 25px;
+  grid-template-columns: repeat(var(--cells), 25px);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#container>div {
+  height: 25px;
+  border: 1px solid #ccc;
+  width: 25px;
+  text-align: center;
+}
+
+.custom-radios input[type="radio"] {
+  display: none;
+}
+
+.custom-radios input[type="radio"]+label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+
+.custom-radios input[type="radio"]+label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 4px 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+
+.custom-radios input[type="radio"]+label span p {
+  opacity: 0;
+  transition: all .3s ease;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.custom-radios input[type="radio"]+label span figure {
+  opacity: 0;
+  transition: all .3s ease;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+
+.custom-radios input[type="radio"]+label span img {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.custom-radios input[type="radio"]#white+label span {
+  background-color: #ffffff;
+}
+
+.custom-radios input[type="radio"]#light-gray+label span {
+  background-color: #bababa
+}
+
+.custom-radios input[type="radio"]#dark-gray+label span {
+  background-color: #676565;
+}
+
+.custom-radios input[type="radio"]#black+label span {
+  background-color: #000000;
+}
+
+.custom-radios input[type="radio"]#pink+label span {
+  background-color: #FC7BFF;
+}
+
+.custom-radios input[type="radio"]#red+label span {
+  background-color: #FF0000;
+}
+
+.custom-radios input[type="radio"]#orange+label span {
+  background-color: #FF7C32;
+}
+
+.custom-radios input[type="radio"]#brown+label span {
+  background-color: #7B5D39;
+}
+
+.custom-radios input[type="radio"]#yellow+label span {
+  background-color: #EBFF05;
+}
+
+.custom-radios input[type="radio"]#lime+label span {
+  background-color: #B5FF7C;
+}
+
+.custom-radios input[type="radio"]#green+label span {
+  background-color: #00A72F;
+}
+
+.custom-radios input[type="radio"]#light-blue+label span {
+  background-color: #3FC5C5;
+}
+
+.custom-radios input[type="radio"]#blue+label span {
+  background-color: #188FE5;
+}
+
+.custom-radios input[type="radio"]#dark-blue+label span {
+  background-color: #002d9e;
+}
+
+.custom-radios input[type="radio"]#light-purple+label span {
+  background-color: #87438D;
+}
+
+.custom-radios input[type="radio"]#purple+label span {
+  background-color: #660177;
+}
+
+.custom-radios input[type="radio"]#empty+label span {
+  background-color: #ffffff;
+  border-radius: 0%;
+}
+
+
+.custom-radios input[type="radio"]:checked+label span p {
+  opacity: 1;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.custom-radios input[type="radio"]:checked+label span figure {
+  opacity: 1;
+  font-size: 2rem;
+  color: rgb(253, 0, 0);
+}
+
+.custom-radios input[type="radio"]:checked+label span img {
+  opacity: 1;
+}
+
+.container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  box-sizing: border-box;
+  padding: 3rem;
+  width: 100%;
+}
+
+.rectangle_1 {
+  background: #c6dbf9;
+  border-radius: 1rem;
+
+  width: clamp(400px, 50%, 1500px);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Sans-serif
+}
+
+.rectangle_1_top {
+  color: #000000;
+  padding: 0.5rem;
+  background-color: #90bcff;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.rectangle_1_content {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 4rem;
+  box-sizing: border-box;
+}
+
+.rectangle_1_content_h {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-height: 25rem;
+  padding: 1rem 4rem;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.rectangle_1_item {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  width: 100%;
+  background: #FFFBFB;
+  border-radius: 0rem;
+  flex-direction: row;
+  align-items: center;
+  padding: 0rem;
+}
+
+.item-name {
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+  width: 30%;
+  font-weight: bold;
+  color: #030439;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #2196F3;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.item-content {
+  display: block;
+  width: 100%;
+  color: rgb(102, 102, 102);
+  margin-right: 0.5rem;
+}
+
+.welcome-container {
+  box-sizing: border-box;
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  width: 100%;
+  background: #FFFBFB;
+  border-radius: 0rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #2196F3;
+  margin: 1rem;
+}
+
+.welcome-post {
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  display: block;
+  width: 80%;
+  color: #030439;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 1rem;
+}
+
+
+.reset_password_button {
+  align-self: flex-start;
+  display: block;
+  text-decoration: none;
+
+  padding: 10px 28px;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  font-family: Sans-serif;
+  border-radius: 10px;
+  border-color: #2196F3;
+  color: dodgerblue;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.reset_password_button:hover {
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px dodgerblue;
+}
+
+.content_links {
+  padding: 0.5rem 3rem;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+.input-content {
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main_page_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+
+.top_row {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  font-size: 1rem;
+  font-family: Sans-serif;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: dodgerblue;
+  font-weight: bold;
+  outline: none;
+  border-radius: 10px;
+  justify-self: end;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.account {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: #000000;
+  background-color: #90bcff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+  margin-top: 0.5rem;
+}
+
+.account:hover {
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px dodgerblue;
+}
+
+.bottom_row {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: Sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-radios {
+  justify-self: flex-start;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+.coords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Sans-serif;
+  margin-right: 1.5rem;
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.pixel_grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  gap: 1rem;
+  height: 200px;
+  max-width: 25rem;
+  text-align: center;
+
+}
+
+#tell_coords,
+#tell_color {
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  position: fixed;
+  margin-left: 118px;
+}
+
+.modal-content span {
+  color: red;
+}
+
+.confirm_button {
+  border: none;
+  font-size: 22px;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-left: auto;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  padding: 8px 16px;
+  margin: 0 auto;
+  background-color: dodgerblue;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.confirm_button:hover {
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(48, 194, 219, 0.87);
+  transform: scale(1.05);
+}
+
+.confirm_button:active {
+  box-shadow: 0 0 10px dodgerblue;
+}
+
+.confirm_button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  z-index: -1;
+}
+
+.confirm_button:hover:before {
+  width: 300%;
+  height: 300%;
+}
+
+.confirm_button:active:before {
+  width: 400%;
+  height: 400%;
+}
+
+.confirm_button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(48, 194, 219, 0.87);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  z-index: -1;
+}
+
+.confirm_button:hover:after {
+  width: 200%;
+  height: 200%;
+}
+
+.confirm_button:active:after {
+  width: 300%;
+  height: 300%;
+}
+
+.pixel {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  animation: fall 2s linear infinite;
+  
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1500%);
+  }
+}
+
+.close {
+  margin-left: auto;
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 30px;
+  /* add this property */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons {
+  font-size: 22px;
+  margin-right: 1rem;
+}
+
+.icon_app {
+  font-size: 2rem;
+}
+
+.chat-button {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: dodgerblue;
+  font-weight: bold;
+  outline: none;
+  margin-top: 5px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  justify-self: end;
+  margin-left: auto;
+}
+
+.chat-button:hover {
+  background: #2196F3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px dodgerblue;
+
+}
+
+.custom-radios {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+    <div class="content">
+        <div class="rectangle_1">
+            <div class="rectangle_1_top"> Welcome </div>
+            <div class="rectangle_1_content">
+                <div class="welcome-container">
+                    <span class="welcome-post"> Welcome to our website. Here you can paint online with your
+                        friends. Create a profile to paint on a shared canvas. Or login in existing account. Have fun!
+                    </span>
+                </div>
+                <div class="content_links">
+                    <button onclick="window.location.href='/login'" class="reset_password_button"> Sign In</button>
+                    <button onclick="window.location.href='/register'" class="reset_password_button"> Sign Up </button>
+                    <button onclick="window.location.href='/main_page'" class="reset_password_button"> Main
+                        Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
