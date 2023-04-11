@@ -10,6 +10,7 @@ from time import ctime
 from time import strptime, mktime
 from pswrd_reset_handler import send_email
 import uuid
+import os
 
 app = Flask(__name__)
 cred = credentials.Certificate("key.json")

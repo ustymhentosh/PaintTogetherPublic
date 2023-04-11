@@ -9,7 +9,7 @@ def send_email(email, token):
     Sends email  
     """
     sender = 'paint.together.reset@gmail.com'
-    password = 'kwpkhnlzvjrccduv'
+    password = 'password not to show on github'
     receiver = email
 
     subject = "Reset password"
